@@ -1,0 +1,54 @@
+body {
+  background: linear-gradient(to bottom right, #110068, #009f52);
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+h1 {
+  font-family: "Marcellus SC", serif;
+  color: rgb(255, 255, 255);
+  font-size: 4vw; /* Tamaño de fuente relativo */
+  padding-top: 3vh;
+}
+
+button {
+  
+  font-size: 2vw; /* Tamaño de fuente relativo */
+  margin-bottom: 2vh;
+
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3vh;
+}
+.controls > div {
+  margin-right: 20px; /* Espacio entre los elementos dentro de .controls */
+}
+#canvas-container {
+  width: 80vw; /* Ajustar el ancho del contenedor del canvas */
+  height: 60vh; /* Ajustar la altura del contenedor del canvas */
+  margin: 0 auto;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+  border: 5px solid white;
+  border-radius: 5%;
+  animation: example 4s infinite;
+}
+
+@keyframes example {
+  0% {
+    box-shadow: 1px 1px 38px grey;
+  }
+  50% {
+    box-shadow: 1px 1px 38px white;
+  }
+  100% {
+    box-shadow: 1px 1px 38px blue; /* Cambiar por el color deseado */
+  }
+}
