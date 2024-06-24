@@ -4,43 +4,35 @@ body {
   padding: 0;
   height: 100vh;
 }
-
 h1 {
   font-family: "Marcellus SC", serif;
   color: rgb(255, 255, 255);
-  font-size: 4vw; /* Tamaño de fuente relativo */
+  font-size: 4vw;
   padding-top: 3vh;
 }
-
 button {
-  
-  font-size: 2vw; /* Tamaño de fuente relativo */
+  font-size: 2vw;
   margin-bottom: 2vh;
-
 }
-
 .controls {
   display: flex;
   justify-content: center;
   margin-bottom: 3vh;
 }
 .controls > div {
-  margin-right: 20px; /* Espacio entre los elementos dentro de .controls */
+  margin-right: 20px;
 }
 #canvas-container {
-  width: 80vw; /* Ajustar el ancho del contenedor del canvas */
-  height: 60vh; /* Ajustar la altura del contenedor del canvas */
+  width: 80vw;
+  height: 60vh;
   margin: 0 auto;
 }
-
 canvas {
   width: 100%;
   height: 100%;
   border: 5px solid white;
   border-radius: 5%;
-  animation: example 4s infinite;
 }
-
 @keyframes example {
   0% {
     box-shadow: 1px 1px 38px grey;

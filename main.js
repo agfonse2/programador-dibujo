@@ -16,10 +16,6 @@ function setup() {
   colorPicker.changed(changeColor);
 }
 
-function preload() {
-  classifier = ml5.imageClassifier('DoodleNet');
-}
-
 function clearCanvas() {
   background(255); // Limpia el canvas a blanco
 }
