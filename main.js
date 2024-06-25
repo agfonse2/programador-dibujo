@@ -8,13 +8,16 @@ function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.parent('canvas-container'); // Coloca el canvas dentro del contenedor
   background(255); // Fondo blanco inicial del canvas
+  let colorPicker = select('#colorPicker');
+  colorPicker.changed(changeColor);
   frameRate(60);
+  
   let slider = select('#slider');
   slider.input(function() {
     strokeWidth = this.value();
   });
-  let colorPicker = select('#colorPicker');
-  colorPicker.changed(changeColor);
+
+  noCanvasScroll();
 }
 
 function clearCanvas() {
@@ -31,4 +34,10 @@ function draw() {
 
 function changeColor() {
   currentColor = select('#colorPicker').value();
+}
+function noCanvasScroll() {
+  let canvasElement = document.querySelector('canvas');
+  canvasElement.addEventListener('touchstart', function(e) {
+    e.preventDefault();
+  });
 }
