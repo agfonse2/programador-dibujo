@@ -8,6 +8,7 @@ function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.parent('canvas-container'); // Coloca el canvas dentro del contenedor
   background(255); // Fondo blanco inicial del canvas
+  frameRate(60);
   let slider = select('#slider');
   slider.input(function() {
     strokeWidth = this.value();
